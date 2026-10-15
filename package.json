@@ -6,12 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "doctor": "npx react-doctor@latest"
   },
   "dependencies": {
+    "@apollo/client": "^4.3.3",
+    "@apollo/client-integration-nextjs": "^0.14.5",
+    "graphql": "^17.0.2",
     "next": "16.4.1",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "swiper": "^14.3.0"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
