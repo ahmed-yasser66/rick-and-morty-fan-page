@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Citadel.Hub // C-137
 
-## Getting Started
+An interdimensional field guide for browsing Rick and Morty characters, locations, and episodes. The site pairs a dark, terminal-inspired interface with data from the Rick and Morty API.
 
-First, run the development server:
+## Screenshots
+
+![image](https://github.com/user-attachments/assets/71ce2f11-6da0-4972-88e6-ad5e1300f584)
+
+![image](https://github.com/user-attachments/assets/dc66f52d-33ca-4b37-ab12-d0df3949ee20)
+
+![image](https://github.com/user-attachments/assets/6c068f48-5f62-4bae-81fe-38282653848b)
+
+![image](https://github.com/user-attachments/assets/28a998cf-2e96-4320-b994-06fb19d3d362)
+
+## Features
+
+- Home page with a featured character carousel and a selection of mapped locations.
+- Character directory and individual profiles with status, species, origin, and dimension details.
+- Episode archive with page navigation.
+- Responsive layout and shared site navigation.
+- Rick and Morty data fetched from the public GraphQL API.
+
+## Tech stack
+
+- Next.js 16 with the App Router
+- React 19 and TypeScript
+- Tailwind CSS 4
+- Apollo Client and GraphQL
+
+## Getting started
+
+### Requirements
+
+- Node.js and npm
+
+### Install and run locally
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the local development server. |
+| `npm run build` | Create a production build. |
+| `npm run start` | Start the production server after building. |
+| `npm run lint` | Run ESLint. |
 
-## Learn More
+## Pages
 
-To learn more about Next.js, take a look at the following resources:
+| Route | Description |
+| --- | --- |
+| `/` | Home page with featured characters and locations. |
+| `/characters` | Character directory. |
+| `/characters/[id]` | Details for an individual character. |
+| `/episodes` | Episode archive, with pagination through the `page` query parameter. |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Data
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Character and episode records are requested from the [Rick and Morty API](https://rickandmortyapi.com/) using GraphQL. The featured location entries are maintained locally in `lib/data.ts`. An internet connection is needed for API-backed content.
 
-## Deploy on Vercel
+## Project structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```text
+app/          App Router pages and global styles
+components/   Shared interface components
+graphql/      Apollo Client setup and GraphQL queries
+lib/          Local display data
+public/       Static assets
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This is an independent fan-made project and is not affiliated with the creators or rights holders of Rick and Morty.
